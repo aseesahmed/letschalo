@@ -155,7 +155,7 @@
         #progressbar li {
             list-style-type: none;
             font-size: 15px;
-            width: 25%;
+            width: 15%;
             float: left;
             position: relative;
             font-weight: 400
@@ -167,6 +167,16 @@
         }
 
         #progressbar #personal:before {
+            font-family: FontAwesome;
+            content: "\f007"
+        }
+
+        #progressbar #package:before {
+            font-family: FontAwesome;
+            content: "\f007"
+        }
+
+        #progressbar #location:before {
             font-family: FontAwesome;
             content: "\f007"
         }
@@ -426,7 +436,7 @@
         <div class="form-group col-md-12">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-10 col-sm-12 col-md-10 col-lg-10 col-xl-8 text-center p-0 mt-3 mb-2">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center p-0 mt-3 mb-2">
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                             <h2 id="heading">Upload your Product Detail</h2>
                             <p>Fill all form field to go to next step</p>
@@ -435,7 +445,9 @@
                                 <ul id="progressbar">
                                     <li class="active" id="account"><strong>Basic</strong></li>
                                     <li id="personal"><strong>Services</strong></li>
-                                    <li id="payment"><strong>Image</strong></li>
+                                    <li id="package"><strong>Package</strong></li>
+                                    <li id="location"><strong>Location</strong></li>
+                                    <li id="payment"><strong>Gallery</strong></li>
                                     <li id="confirm"><strong>Finish</strong></li>
                                 </ul>
                                 <div class="progress">
@@ -452,12 +464,13 @@
                                             </div>
                                         </div>
                                         <label class="fieldlabels">Product Name: *</label> 
-                                        <input type="text" name="product-name" placeholder="Product Name.." />
+                                        <input class="form-control" type="text" name="product-name" placeholder="Product Name.." />
                                         <label class="fieldlabels">Product Rent: *</label> 
                                         <input type="text" name="product-rent" placeholder="Product Rent.." />  
                                         <label class="fieldlabels">Product Description: *</label> 
                                         <textarea name="product-desc" id="product-desc" cols="30" rows="10"></textarea>
-                                        
+                                        <label class="fieldlabels">Product Slider Images: *</label> 
+                                        <input type="file" name="productSliderImages[]" placeholder="Product Slider Images.." multiple />  
                                         
                                     </div> 
                                     <input type="button" name="next" class="next action-button" value="Next" />
@@ -472,11 +485,13 @@
                                                 <h2 class="steps">Step 2 - 4</h2>
                                             </div>
                                         </div> 
+                                        <label class="fieldlabels">Service Image: *</label> 
+                                        <input type="file" name="ServiceImage" placeholder="Service Image.." />
                                         <table class="table table-hover sliderTable" style="margin-bottom: 50px">
                                             <thead>
                                                 <tr>
                                                     <th> Service Type </th>
-                                                    <th> <button id="addRow" type="button" class="btn btn-info"><i class="fa fa-plus"></i> Slider</button> </th>
+                                                    <th> <button id="addRow" type="button" class="btn btn-info"><i class="fa fa-plus"></i> Service</button> </th>
                                                 </tr>
                                             </thead>
                                             <tbody class="tableSort2">
@@ -498,13 +513,51 @@
                                     <div class="form-card">
                                         <div class="row">
                                             <div class="col-7">
-                                                <h2 class="fs-title">Image Upload:</h2>
+                                                <h2 class="fs-title">Package Information:</h2>
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 2 - 4</h2>
+                                            </div>
+                                        </div> 
+                                        <label class="fieldlabels">Package Image: *</label> 
+                                        <input type="file" name="PackageImage" placeholder="Package Image.." />
+                                        <label class="fieldlabels">Terms & Condition: *</label> 
+                                        <textarea name="termsAndCondition" id="termsAndCondition" cols="30" rows="10"></textarea>
+                                    </div> 
+                                    <input type="button" name="next" class="next action-button" value="Next" /> 
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="fs-title">Location Information:</h2>
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 2 - 4</h2>
+                                            </div>
+                                        </div> 
+                                        <label class="fieldlabels">Location: *</label> 
+                                        <input type="text" name="Location" placeholder="Location Url.." />
+                                    </div> 
+                                    <input type="button" name="next" class="next action-button" value="Next" /> 
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="fs-title">Gallery:</h2>
                                             </div>
                                             <div class="col-5">
                                                 <h2 class="steps">Step 3 - 4</h2>
                                             </div>
-                                        </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
-                                    </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                        </div> 
+                                        <label class="fieldlabels">Gallery:</label> 
+                                        <input type="file" name="gallery[]" accept="image/*" placeholder="Upload Multiple Images" multiple /> 
+                                    </div> 
+                                    <input type="button" name="next" class="next action-button" value="Submit" /> 
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                 </fieldset>
                                 <fieldset>
                                     <div class="form-card">
@@ -541,18 +594,10 @@
       <footer class="text-center">
         <div class="mb-2">
           <small>
-            © 2020 made with <i class="fa fa-heart" style="color:red"></i> by - <a target="_blank" rel="noopener noreferrer" href="https://azouaoui.netlify.com">
-              Mohamed Azouaoui
+            © 2020 made with <i class="fa fa-heart" style="color:red"></i> by - 
+              Asees Ahmed
             </a>
           </small>
-        </div>
-        <div>
-          <a href="https://github.com/azouaoui-med" target="_blank">
-            <img alt="GitHub followers" src="https://img.shields.io/github/followers/azouaoui-med?label=github&style=social" />
-          </a>
-          <a href="https://twitter.com/azouaoui_med" target="_blank">
-            <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/azouaoui_med?label=twitter&style=social" />
-          </a>
         </div>
       </footer>
     </div>
