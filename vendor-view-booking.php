@@ -37,50 +37,47 @@
                         <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>First name</th>
-                                    <th>Last name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                    <th>Extn.</th>
-                                    <th>E-mail</th>
+                                    <th>Sr. No</th>
+                                    <th>Product Name</th>
+                                    <th>Booking Date</th>
+                                    <th>Booking Slot</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Tiger</td>
-                                    <td>Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                    <td>5421</td>
-                                    <td>t.nixon@datatables.net</td>
+                                    <td>1</td>
+                                    <td>Hawksbay Beach Hut</td>
+                                    <td>31st January, 2022</td>
+                                    <td>Morning</td>
+                                    <td>Pending</td>
+                                    <td>
+                                    <a class="btn btn-primary"><i class="fa fa-pencil"></i></a> 
+                                    <a class="btn btn-danger"><i class="fa fa-times"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Hermione</td>
-                                    <td>Butler</td>
-                                    <td>Regional Director</td>
-                                    <td>London</td>
-                                    <td>47</td>
-                                    <td>2011/03/21</td>
-                                    <td>$356,250</td>
-                                    <td>1016</td>
-                                    <td>h.butler@datatables.net</td>
+                                    <td>2</td>
+                                    <td>ABC Farmhouse</td>
+                                    <td>31st January, 2022</td>
+                                    <td>Evening</td>
+                                    <td>Pending</td>
+                                    <td>
+                                        <a class="btn btn-primary"><i class="fa fa-pencil"></i></a> 
+                                        <a class="btn btn-danger"><i class="fa fa-times"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Lael</td>
-                                    <td>Greer</td>
-                                    <td>Systems Administrator</td>
-                                    <td>London</td>
-                                    <td>21</td>
-                                    <td>2009/02/27</td>
-                                    <td>$103,500</td>
-                                    <td>6733</td>
-                                    <td>l.greer@datatables.net</td>
+                                    <td>3</td>
+                                    <td>Dreamworld Resort</td>
+                                    <td>31st January, 2022</td>
+                                    <td>Night</td>
+                                    <td>Pending</td>
+                                    <td>
+                                        <a class="btn btn-primary"><i class="fa fa-pencil"></i></a> 
+                                        <a class="btn btn-danger"><i class="fa fa-times"></i></a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>    

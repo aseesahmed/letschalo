@@ -23,7 +23,7 @@
         </div>
       </div>
       <!-- sidebar-header  -->
-      <div class="sidebar-search">
+      <!-- <div class="sidebar-search">
         <div>
           <div class="input-group">
             <input type="text" class="form-control search-menu" placeholder="Search...">
@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- sidebar-search  -->
       <div class="sidebar-menu">
         <ul>
@@ -60,7 +60,7 @@
               <span>View Booking</span>
             </a>
           </li>
-          <li class="sidebar-dropdown">
+          <!-- <li class="sidebar-dropdown">
             <a href="#">
               <i class="fa fa-shopping-cart"></i>
               <span>E-commerce</span>
@@ -166,7 +166,7 @@
               <i class="fa fa-folder"></i>
               <span>Examples</span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
       <!-- sidebar-menu  -->
